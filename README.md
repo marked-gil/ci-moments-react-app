@@ -1,70 +1,99 @@
-# Getting Started with Create React App
+# MOMENTS APP
+A Full-featured Photo Sharing Service Using React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## User Stories
 
-## Available Scripts
+### **Navigation & Authentication**
+Navigation:
+> As a user I can view a navbar from every page so that I can navigate easily between pages
 
-In the project directory, you can run:
+Routing:
+> As a user I can navigate through pages quickly so that I can view content seamlessly without page refresh
 
-### `npm start`
+Authentication - Sign up:
+> As a user I can create a new account so that I can access all the features for signed up users
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Authentication - Sign in: 
+> As a user I can sign in to the app so that I can access functionality for logged in users
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Authentication - Logged in Status: 
+> As a user I can tell if I am logged in or not so that I can log in if I need to
 
-### `npm test`
+Authentication - Refreshing access tokens: 
+> As a user I can maintain my logged-in status until I choose to log out so that my user experience is not compromised
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Navigation: Conditional rendering
+> As a logged out user I can see sign in and sign up options so that I can sign in/sign up
 
-### `npm run build`
+Avatar:
+> As a user I can view user's avatars so that I can easily identify users of the application
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Adding & Liking Posts
+Create posts:
+> As a logged in user I can create posts so that I can share my images with the world!
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+View a post: 
+> As a user I can view the details of a single post so that I can learn more about it
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Like a post: 
+> As a logged in user I can like a post so that I can show my support for the posts that interest me
 
-### `npm run eject`
+### **The Posts Page**
+View most recent posts: 
+> As a user I can view all the most recent posts, ordered by most recently created first so that I am up to date with the newest content
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+> As a user, I can search for posts with keywords, so that I can find the posts and user profiles I am most interested in.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+View liked posts: 
+> As a logged in user I can view the posts I liked so that I can find the posts I enjoy the most
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+View posts of followed users: 
+> As a logged in user I can view content filtered by users I follow so that I can keep up to date with what they are posting about
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Infinite scroll: 
+> As a user I can keep scrolling through the images on the site, that are loaded for me automatically so that I don't have to click on "next page" etc
 
-## Learn More
+### **The Post Page**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Post page: 
+> As a user I can view the posts page so that I can read the comments about the post
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Edit post:
+> As a post owner I can edit my post title and description so that I can make corrections or update my post after it was created
 
-### Code Splitting
+Create a comment: 
+> As a logged in user I can add comments to a post so that I can share my thoughts about the post
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Comment date:
+> As a user I can see how long ago a comment was made so that I know how old a comment is
 
-### Analyzing the Bundle Size
+View comments: 
+> As a user I can read comments on posts so that I can read what other users think about the posts
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Delete comments: 
+> As an owner of a comment I can delete my comment so that I can control removal of my comment from the application
 
-### Making a Progressive Web App
+Edit a comment: 
+> As an owner of a comment I can edit my comment so that I can fix or update my existing comment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### **The Profile Page**
+Profile page: 
+> As a user I can view other users profiles so that I can see their posts and learn more about them
 
-### Advanced Configuration
+Most followed profiles: 
+> As a user I can see a list of the most followed profiles so that I can see which profiles are popular
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+User profile - user stats: 
+> As a user I can view statistics about a specific user: bio, number of posts, follows and users followed so that I can learn more about them
 
-### Deployment
+Follow/Unfollow a user: 
+> As a logged in user I can follow and unfollow other users so that I can see and remove posts by specific users in my posts feed
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+View all posts by a specific user: 
+> As a user I can view all the posts by a specific user so that I can catch up on their latest posts, or decide I want to follow them
 
-### `npm run build` fails to minify
+Edit profile: 
+> As a logged in user I can edit my profile so that I can change my profile picture and bio
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Update username and password:
+> As a logged in user I can update my username and password so that I can change my display name and keep my profile secure
