@@ -6,3 +6,6 @@ axios.defaults.baseURL = "https://dj-rest-framework-api.herokuapp.com/";
 axios.defaults.headers.post["Content-Type"] = "multipart/form-data";
 // To avoid CORS errors when sending cookies
 axios.defaults.withCredentials = true;
+
+export const axiosReq = axios.create();
+export const axiosRes = axios.create();
