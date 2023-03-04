@@ -1,12 +1,12 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import logo from "../assets/logo.png";
 import styles from "../styles/NavBar.module.css";
 import { NavLink } from "react-router-dom";
-import { CurrentUserContext } from "../App";
+import { useCurrentUser } from "../contexts/CurrentUserContext";
 
 const NavBar = () => {
-  const currentUser = useContext(CurrentUserContext);
+  const currentUser = useCurrentUser();
 
   const loggedInIcons = <>{currentUser?.username}</>;
   const loggedOutIcons = (
@@ -14,7 +14,7 @@ const NavBar = () => {
       <NavLink
         className={styles.NavLink}
         activeClassName={styles.Active}
-        to="/signin" 
+        to="/signin"
       >
         <i className="fas fa-sign-in-alt"></i>Sign in
       </NavLink>
@@ -33,7 +33,7 @@ const NavBar = () => {
       <Container>
         <NavLink to="/">
           <Navbar.Brand>
-          <img src={logo} alt="logo" height="45" />
+            <img src={logo} alt="logo" height="45" />
           </Navbar.Brand>
         </NavLink>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
