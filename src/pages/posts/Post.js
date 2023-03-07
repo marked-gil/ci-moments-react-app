@@ -44,6 +44,7 @@ const Post = (props) => {
 
   const handleUnlike = async () => {
     try {
+      // eslint-disable-next-line
       const { data } = await axiosRes.delete(`/likes/${like_id}`)
       setPosts((prevPosts) => ({
         ...prevPosts,
